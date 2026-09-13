@@ -3,143 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Contact | Aedan Johnson</title>
+  <title>Aedan Johnson | Contact</title>
   <meta name="description" content="Get in touch with Aedan Johnson by email, LinkedIn, or GitHub.">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="frame">
+<div class="site-window window">
 
-  <!-- SITE HEADER (identical on every page) -->
-  <header class="site-head">
-    <div>
-      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
-      <p class="site-tagline">networking student who would rather take it apart than leave it alone</p>
+  <div class="title-bar">
+    <div class="title-bar-text">Aedan Johnson | Contact</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
-    <p class="head-meta">
-      <span class="dot" aria-hidden="true"></span>online now<br>
-      profile views: 4,912
-    </p>
-  </header>
-
-  <nav aria-label="Main">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a class="here" href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="status-strip">
-    <p>email is the fastest way to reach me &nbsp;&#9679;&nbsp; open to internships and IT work &nbsp;&#9679;&nbsp; I answer everything that is not a recruiter bot</p>
   </div>
 
-  <div class="layout">
+  <div class="window-body">
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="col-side">
+    <menu role="tablist">
+      <li role="tab"><a href="index.html">Home</a></li>
+      <li role="tab"><a href="about.html">About</a></li>
+      <li role="tab"><a href="skills.html">Skills</a></li>
+      <li role="tab"><a href="experience.html">Experience</a></li>
+      <li role="tab"><a href="photos.html">Photos</a></li>
+      <li role="tab" aria-selected="true"><a href="contact.html">Contact</a></li>
+    </menu>
 
-      <section class="module profile-card" aria-label="Profile">
-        <div class="photo-frame">
-          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
-               width="600" height="700">
+    <div class="window" role="tabpanel">
+      <div class="window-body">
+
+        <div class="layout">
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="col-side">
+
+            <fieldset class="profile-card">
+              <legend>Aedan Johnson</legend>
+              <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+                   width="600" height="700">
+              <p class="name">Aedan</p>
+              <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Availability</legend>
+              <dl class="kv">
+                <dt>Looking for</dt>
+                <dd>IT, networking, and security internships</dd>
+                <dt>Location</dt>
+                <dd>Monroe and Lehigh county area, or remote</dd>
+                <dt>Response time</dt>
+                <dd>Usually within a day</dd>
+              </dl>
+            </fieldset>
+
+          </aside>
+
+          <!-- ===== MAIN COLUMN ===== -->
+          <main class="col-main">
+
+            <!-- CONTACT DETAILS
+                 Each row uses 98.css's field-row-stacked layout, with a
+                 field-border box holding the actual link so it stays
+                 clickable. Replace the LinkedIn placeholder with your real
+                 profile URL. -->
+            <fieldset>
+              <legend>Get In Touch</legend>
+              <p>
+                Best way to reach me is email. If you're hiring, happy to send a
+                resume or walk through anything on the experience page.
+              </p>
+
+              <div class="field-row-stacked" style="width: 100%; max-width: 420px">
+                <label>Email</label>
+                <div class="field-border" style="padding: 6px 8px">
+                  <a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a>
+                </div>
+              </div>
+
+              <div class="field-row-stacked" style="width: 100%; max-width: 420px; margin-top: 10px">
+                <label>LinkedIn</label>
+                <div class="field-border" style="padding: 6px 8px">
+                  <!-- Paste your real LinkedIn URL in both the href and the text -->
+                  <a href="https://www.linkedin.com/in/your-linkedin-here">linkedin.com/in/your-linkedin-here</a>
+                </div>
+              </div>
+
+              <div class="field-row-stacked" style="width: 100%; max-width: 420px; margin-top: 10px">
+                <label>GitHub</label>
+                <div class="field-border" style="padding: 6px 8px">
+                  <a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a>
+                </div>
+              </div>
+
+              <p style="margin-top: 14px; font-size: 12px">
+                Note to self: this page is on purpose email only, no phone number
+                and no street address. If you ever want a contact form instead,
+                that needs a server or a third party form service, since plain
+                static HTML can't send mail on its own.
+              </p>
+            </fieldset>
+
+            <!-- QUICK LINKS BACK INTO THE SITE -->
+            <fieldset>
+              <legend>Before You Go</legend>
+              <div class="tile-grid">
+                <fieldset>
+                  <legend>Read the bio</legend>
+                  <p><a href="about.html">How I got into security and networking</a></p>
+                </fieldset>
+                <fieldset>
+                  <legend>Check the certs</legend>
+                  <p><a href="skills.html">AWS, Cisco, TestOut, and what I can do
+                      with them</a></p>
+                </fieldset>
+                <fieldset>
+                  <legend>See the code</legend>
+                  <p><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></p>
+                </fieldset>
+              </div>
+            </fieldset>
+
+          </main>
         </div>
-        <div class="module-body">
-          <p class="name">Aedan</p>
-          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+
+        <div class="status-bar">
+          <p class="status-bar-field">Ready</p>
+          <p class="status-bar-field">Open to internships and IT work</p>
+          <p class="status-bar-field">I answer everything that isn't a recruiter bot</p>
         </div>
-      </section>
 
-      <!-- AVAILABILITY WIDGET -->
-      <section class="module tinted" aria-label="Availability">
-        <h2>Availability</h2>
-        <div class="module-body">
-          <dl class="kv">
-            <dt>Looking for</dt>
-            <dd>IT, networking, and security internships</dd>
-            <dt>Location</dt>
-            <dd>Monroe and Lehigh county area, or remote</dd>
-            <dt>Response time</dt>
-            <dd>Usually within a day</dd>
-          </dl>
-        </div>
-      </section>
+      </div>
+    </div>
 
-    </aside>
-
-    <!-- ===== MAIN COLUMN ===== -->
-    <main class="col-main">
-
-      <!-- CONTACT DETAILS
-           Each row is a <div> wrapping a <dt> and <dd>. Replace the LinkedIn
-           placeholder with your real profile URL. -->
-      <section class="module">
-        <h2>Get In Touch</h2>
-        <div class="module-body">
-          <p>
-            Best way to reach me is email. If you are hiring, happy to send a resume
-            or walk through anything on the experience page.
-          </p>
-
-          <dl class="contact-list">
-            <div>
-              <dt>Email</dt>
-              <dd><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></dd>
-            </div>
-            <div>
-              <dt>LinkedIn</dt>
-              <!-- Paste your real LinkedIn URL in both the href and the text -->
-              <dd><a href="https://www.linkedin.com/in/your-linkedin-here">linkedin.com/in/your-linkedin-here</a></dd>
-            </div>
-            <div>
-              <dt>GitHub</dt>
-              <dd><a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a></dd>
-            </div>
-          </dl>
-
-          <hr class="rule">
-
-          <p class="note">
-            Note to self: this page is on purpose email only, no phone number and no
-            street address. If you ever want a contact form instead, that needs a
-            server or a third party form service, since plain static HTML cannot send
-            mail on its own.
-          </p>
-        </div>
-      </section>
-
-      <!-- QUICK LINKS BACK INTO THE SITE -->
-      <section class="module tinted">
-        <h2>Before You Go</h2>
-        <div class="module-body">
-          <div class="tile-grid">
-            <div class="tile">
-              <h4>Read the bio</h4>
-              <p><a href="about.html">How I got into security and networking</a></p>
-            </div>
-            <div class="tile">
-              <h4>Check the certs</h4>
-              <p><a href="skills.html">AWS, Cisco, TestOut, and what I can do with them</a></p>
-            </div>
-            <div class="tile">
-              <h4>See the code</h4>
-              <p><a href="https://github.com/Aedan-Johnson/Internship_Portfolio">Internship portfolio on GitHub</a></p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-    </main>
   </div>
-
-  <footer class="site-foot">
-    <span>&copy; 2026 Aedan Johnson</span>
-    <span>built by hand in HTML and CSS, no frameworks</span>
-  </footer>
-
 </div>
+
 </body>
 </html>

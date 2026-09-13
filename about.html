@@ -3,182 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>About | Aedan Johnson</title>
+  <title>Aedan Johnson | About</title>
   <meta name="description" content="How Aedan Johnson got into cybersecurity and networking.">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="frame">
+<div class="site-window window">
 
-  <!-- SITE HEADER (identical on every page) -->
-  <header class="site-head">
-    <div>
-      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
-      <p class="site-tagline">networking student who would rather take it apart than leave it alone</p>
+  <div class="title-bar">
+    <div class="title-bar-text">Aedan Johnson | About</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
-    <p class="head-meta">
-      <span class="dot" aria-hidden="true"></span>online now<br>
-      profile views: 4,912
-    </p>
-  </header>
-
-  <!-- SHARED NAV: class="here" marks this page -->
-  <nav aria-label="Main">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a class="here" href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="status-strip">
-    <p>reading: packet captures &nbsp;&#9679;&nbsp; favorite command: ss -tulpn &nbsp;&#9679;&nbsp; ask me about my first blue screen</p>
   </div>
 
-  <div class="layout">
+  <div class="window-body">
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="col-side">
+    <menu role="tablist">
+      <li role="tab"><a href="index.html">Home</a></li>
+      <li role="tab" aria-selected="true"><a href="about.html">About</a></li>
+      <li role="tab"><a href="skills.html">Skills</a></li>
+      <li role="tab"><a href="experience.html">Experience</a></li>
+      <li role="tab"><a href="photos.html">Photos</a></li>
+      <li role="tab"><a href="contact.html">Contact</a></li>
+    </menu>
 
-      <!-- Smaller photo box for interior pages.
-           Swap images/profile.jpg for a second photo if you want variety. -->
-      <section class="module profile-card" aria-label="Profile">
-        <div class="photo-frame">
-          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
-               width="600" height="700">
+    <div class="window" role="tabpanel">
+      <div class="window-body">
+
+        <div class="layout">
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="col-side">
+
+            <fieldset class="profile-card">
+              <legend>Aedan Johnson</legend>
+              <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+                   width="600" height="700">
+              <p class="name">Aedan</p>
+              <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Interests</legend>
+              <dl class="kv">
+                <dt>Building</dt>
+                <dd>PCs, homelab, anything with a case I can open</dd>
+                <dt>Downtime</dt>
+                <dd>Gaming, music</dd>
+                <dt>Side hustle</dt>
+                <dd>Buying and reselling electronics</dd>
+              </dl>
+            </fieldset>
+
+          </aside>
+
+          <!-- ===== MAIN COLUMN ===== -->
+          <main class="col-main">
+
+            <fieldset>
+              <legend>The Long Version</legend>
+              <p>
+                I'd rather take something apart, mess with it, and learn how to fix
+                it than just leave it alone.
+              </p>
+              <p>
+                I'm a networking student who's really into technology, computers,
+                and figuring out how things work. Networking, cybersecurity,
+                homelabs, and PC building are what I care about most, basically
+                anything that lets me actually work with technology instead of
+                just reading about it.
+              </p>
+              <p>
+                I've picked up experience through internships, school projects, and
+                messing with different kinds of tech on my own. I've worked with
+                WordPress, networking equipment, Python scripts, servers, and
+                troubleshooting problems that don't always have an obvious answer.
+                I'm still learning, and I like that part of it. I'd rather actually
+                understand something than pretend I already know it.
+              </p>
+
+              <p><strong>How I got into networking and security</strong></p>
+              <p>
+                I picked the Computer Networking &amp; Security program at Monroe
+                Career &amp; Technical Institute because I wanted to actually work
+                with this stuff instead of just reading about it. Learning
+                networking first is what made security click: addressing,
+                subnetting, switching, routing, all of it. TestOut PC Pro and the
+                Cisco courses gave me a real sense of how traffic moves and what
+                shouldn't be allowed to follow it.
+              </p>
+
+              <p><strong>Competing</strong></p>
+              <p>
+                CyberPatriot is what really got me hooked. You get a broken Windows
+                or Linux box and a clock, and you have to find the
+                misconfigurations and bad accounts before time runs out. No
+                partial credit for knowing the theory. My team took second place,
+                gold tier, at the CyberPatriot XVIII Pennsylvania state round.
+                SkillsUSA added the troubleshooting side, I placed second in IT
+                Servicing at districts.
+              </p>
+
+              <p><strong>Internships and AI</strong></p>
+              <p>
+                My internships at Achyuraa put me on the AI and machine learning
+                side, which I didn't expect to get into as much as I did. I built a
+                prototype to catch AI hallucinations, cleaned and structured
+                datasets, and benchmarked different models against each other. The
+                next summer I worked on their customer facing chatbot, organizing
+                the FAQ system and writing the WordPress guide for deploying it.
+              </p>
+
+              <p><strong>Outside of school</strong></p>
+              <p>
+                I build PCs, mess with my homelab, game, and listen to a lot of
+                music. I've also gotten into buying and reselling electronics and
+                computers. I like the idea of making something out of tech that
+                other people overlook.
+              </p>
+
+              <p><strong>Where I'm headed</strong></p>
+              <p>
+                I don't have everything figured out yet. I want to keep working
+                with networking and security, keep building out my homelab, and
+                eventually do something with technology that I actually enjoy for
+                a living. Right now that means an internship or entry role where I
+                can work with real infrastructure: help desk, network operations,
+                or a security team.
+              </p>
+              <p>
+                <a href="skills.html">See the certifications and skills</a> or
+                <a href="experience.html">read the work history</a>.
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>Random Facts</legend>
+              <ul>
+                <li>Life Scout, six years in Boy Scouts, former patrol leader</li>
+                <li>Student of the Quarter at MCTI, first and fourth quarter 2024
+                    to 2025</li>
+                <li>Two summers on a school district maintenance crew, which is
+                    where I learned that documentation and labeling matter
+                    everywhere</li>
+                <li>I buy and resell electronics and computers on the side, mostly
+                    because I like finding stuff other people overlook</li>
+              </ul>
+            </fieldset>
+
+          </main>
         </div>
-        <div class="module-body">
-          <p class="name">Aedan</p>
-          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+
+        <div class="status-bar">
+          <p class="status-bar-field">Ready</p>
+          <p class="status-bar-field">Favorite command: ss tulpn</p>
+          <p class="status-bar-field">Ask me about my first blue screen</p>
         </div>
-      </section>
 
-      <!-- INTERESTS WIDGET: pure personality, edit freely -->
-      <section class="module tinted" aria-label="Interests">
-        <h2>Interests</h2>
-        <div class="module-body">
-          <dl class="kv">
-            <dt>Building</dt>
-            <dd>PCs, homelab, anything with a case I can open</dd>
-            <dt>Downtime</dt>
-            <dd>Gaming, music</dd>
-            <dt>Side hustle</dt>
-            <dd>Buying and reselling electronics</dd>
-          </dl>
-        </div>
-      </section>
+      </div>
+    </div>
 
-    </aside>
-
-    <!-- ===== MAIN COLUMN ===== -->
-    <main class="col-main">
-
-      <!-- BIO
-           Written from what Aedan told me directly, not invented. Edit any
-           of this freely, the layout will not change. -->
-      <section class="module">
-        <h2>The Long Version</h2>
-        <div class="module-body">
-          <p class="pull">
-            I'd rather take something apart, mess with it, and learn how to fix it
-            than just leave it alone.
-          </p>
-          <p>
-            I'm a networking student who's really into technology, computers, and
-            figuring out how things work. Networking, cybersecurity, homelabs, and
-            PC building are what I care about most, basically anything that lets me
-            actually work with technology instead of just reading about it.
-          </p>
-          <p>
-            I've picked up experience through internships, school projects, and
-            messing with different kinds of tech on my own. I've worked with
-            WordPress, networking equipment, Python scripts, servers, and
-            troubleshooting problems that don't always have an obvious answer. I'm
-            still learning, and I like that part of it. I'd rather actually
-            understand something than pretend I already know it.
-          </p>
-
-          <h3>How I got into networking and security</h3>
-          <p>
-            I picked the Computer Networking &amp; Security program at Monroe Career
-            &amp; Technical Institute because I wanted to actually work with this
-            stuff instead of just reading about it. Learning networking first is
-            what made security click: addressing, subnetting, switching, routing,
-            all of it. TestOut PC Pro and the Cisco courses gave me a real sense of
-            how traffic moves and what shouldn't be allowed to follow it.
-          </p>
-
-          <h3>Competing</h3>
-          <p>
-            CyberPatriot is what really got me hooked. You get a broken Windows or
-            Linux box and a clock, and you have to find the misconfigurations and
-            bad accounts before time runs out. No partial credit for knowing the
-            theory. My team took second place, gold tier, at the CyberPatriot XVIII
-            Pennsylvania state round. SkillsUSA added the troubleshooting side, I
-            placed second in IT Servicing at districts.
-          </p>
-
-          <h3>Internships and AI</h3>
-          <p>
-            My internships at Achyuraa put me on the AI and machine learning side,
-            which I didn't expect to get into as much as I did. I built a prototype
-            to catch AI hallucinations, cleaned and structured datasets, and
-            benchmarked different models against each other. The next summer I
-            worked on their customer facing chatbot, organizing the FAQ system and
-            writing the WordPress guide for deploying it.
-          </p>
-
-          <h3>Outside of school</h3>
-          <p>
-            I build PCs, mess with my homelab, game, and listen to a lot of music.
-            I've also gotten into buying and reselling electronics and computers.
-            I like the idea of making something out of tech that other people
-            overlook.
-          </p>
-
-          <hr class="rule">
-
-          <h3>Where I'm headed</h3>
-          <p>
-            I don't have everything figured out yet. I want to keep working with
-            networking and security, keep building out my homelab, and eventually
-            do something with technology that I actually enjoy for a living. Right
-            now that means an internship or entry role where I can work with real
-            infrastructure: help desk, network operations, or a security team.
-          </p>
-          <p>
-            <a href="skills.html">See the certifications and skills</a> or
-            <a href="experience.html">read the work history</a>.
-          </p>
-        </div>
-      </section>
-
-      <!-- FUN FACTS: keep or delete, this is the personality filler slot -->
-      <section class="module tinted">
-        <h2>Random Facts</h2>
-        <div class="module-body">
-          <ul>
-            <li>Life Scout, six years in Boy Scouts, former patrol leader</li>
-            <li>Student of the Quarter at MCTI, first and fourth quarter 2024 to 2025</li>
-            <li>Two summers on a school district maintenance crew, which is where I
-                learned that documentation and labeling matter everywhere</li>
-            <li>I buy and resell electronics and computers on the side, mostly
-                because I like finding stuff other people overlook</li>
-          </ul>
-        </div>
-      </section>
-
-    </main>
   </div>
-
-  <footer class="site-foot">
-    <span>&copy; 2026 Aedan Johnson</span>
-    <span>built by hand in HTML and CSS, no frameworks</span>
-  </footer>
-
 </div>
+
 </body>
 </html>

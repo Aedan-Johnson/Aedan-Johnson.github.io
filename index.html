@@ -3,197 +3,172 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aedan Johnson | Cybersecurity &amp; Networking Student</title>
+  <title>Aedan Johnson | Home</title>
   <meta name="description" content="Personal profile of Aedan Johnson, a cybersecurity and networking student at Monroe Career and Technical Institute.">
+  <!-- 98.css draws every classic Windows 98 control: windows, title bars,
+       group boxes, tabs, tables, status bars. style.css only adds the
+       page layout on top of it. -->
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ==========================================================================
-     PAGE FRAME
-     Everything sits inside .frame so it floats on the tiled background.
+     OUTER WINDOW
+     Every page is one 98.css "window". Copy this whole title-bar block onto
+     other pages and just change the title-bar-text.
      ========================================================================== -->
-<div class="frame">
+<div class="site-window window">
 
-  <!-- ------------------------------------------------------------------------
-       SITE HEADER
-       Same on every page. Edit the title and tagline here, then paste the
-       identical block into the other five pages.
-       ------------------------------------------------------------------------ -->
-  <header class="site-head">
-    <div>
-      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
-      <p class="site-tagline">networking student who would rather take it apart than leave it alone</p>
+  <div class="title-bar">
+    <div class="title-bar-text">Aedan Johnson | Home</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
-    <p class="head-meta">
-      <span class="dot" aria-hidden="true"></span>online now<br>
-      profile views: 4,912
-    </p>
-  </header>
-
-  <!-- ------------------------------------------------------------------------
-       SHARED NAV
-       To mark the current page, put class="here" on that one link.
-       ------------------------------------------------------------------------ -->
-  <nav aria-label="Main">
-    <ul class="nav">
-      <li><a class="here" href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="experience.html">Experience</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- ------------------------------------------------------------------------
-       STATUS STRIP
-       One scrolling line of text. Change the sentence to whatever you want.
-       It stops scrolling automatically for visitors who reduce motion.
-       ------------------------------------------------------------------------ -->
-  <div class="status-strip">
-    <p>currently: hardening a lab VM and studying for the next Cisco exam &nbsp;&#9679;&nbsp; mood: caffeinated &nbsp;&#9679;&nbsp; last updated: September 2026</p>
   </div>
 
-  <!-- ------------------------------------------------------------------------
-       MAIN LAYOUT: sidebar + main column
-       ------------------------------------------------------------------------ -->
-  <div class="layout">
+  <div class="window-body">
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="col-side">
+    <!-- ------------------------------------------------------------------
+         SHARED NAV, BUILT AS 98.css TABS
+         Same six tabs on every page. Put aria-selected="true" on the tab
+         for whichever page you're on, and remove it from the others.
+         ------------------------------------------------------------------ -->
+    <menu role="tablist">
+      <li role="tab" aria-selected="true"><a href="index.html">Home</a></li>
+      <li role="tab"><a href="about.html">About</a></li>
+      <li role="tab"><a href="skills.html">Skills</a></li>
+      <li role="tab"><a href="experience.html">Experience</a></li>
+      <li role="tab"><a href="photos.html">Photos</a></li>
+      <li role="tab"><a href="contact.html">Contact</a></li>
+    </menu>
 
-      <!-- PROFILE PHOTO BOX
-           Replace images/profile.jpg with your own photo. A square or
-           portrait crop around 600px wide looks best. -->
-      <section class="module profile-card" aria-label="Profile">
-        <div class="photo-frame">
-          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
-               width="600" height="700">
+    <!-- The tab content lives inside its own nested window, per the 98.css
+         tabs pattern. -->
+    <div class="window" role="tabpanel">
+      <div class="window-body">
+
+        <div class="layout">
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="col-side">
+
+            <!-- PROFILE PHOTO BOX
+                 Replace images/profile.jpg with your own photo. -->
+            <fieldset class="profile-card">
+              <legend>Aedan Johnson</legend>
+              <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+                   width="600" height="700">
+              <p class="name">Aedan</p>
+              <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+            </fieldset>
+
+            <fieldset>
+              <legend>The Basics</legend>
+              <dl class="kv">
+                <dt>Location</dt>
+                <dd>Brodheadsville, PA</dd>
+                <dt>Studying</dt>
+                <dd>Computer Networking &amp; Security</dd>
+                <dt>Certs</dt>
+                <dd>AWS, CCNA ITN, TestOut PC Pro</dd>
+                <dt>Competes in</dt>
+                <dd>CyberPatriot, SkillsUSA</dd>
+              </dl>
+            </fieldset>
+
+            <fieldset>
+              <legend>Elsewhere</legend>
+              <ul class="stack">
+                <li><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></li>
+                <!-- Paste your real LinkedIn URL over the placeholder below -->
+                <li><a href="https://www.linkedin.com/in/your-linkedin-here">LinkedIn</a></li>
+                <li><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></li>
+              </ul>
+            </fieldset>
+
+          </aside>
+
+          <!-- ===== MAIN COLUMN ===== -->
+          <main class="col-main">
+
+            <fieldset>
+              <legend>Hey, I'm Aedan</legend>
+              <p>
+                I'd rather take something apart, mess with it, and learn how to fix
+                it than just leave it alone.
+              </p>
+              <p>
+                I'm a networking student at Monroe Career &amp; Technical Institute,
+                still finishing high school at Pleasant Valley. I'm into technology,
+                computers, and figuring out how things work, especially networking,
+                cybersecurity, homelabs, and PC building. Anything that lets me
+                actually work with tech instead of just reading about it.
+              </p>
+              <p>
+                I've picked up experience through internships, school projects, and
+                messing with tech on my own. The last two summers I interned
+                remotely at Achyuraa, a tech services firm working in AI, cloud and
+                managed services, and cybersecurity. I built a prototype to catch AI
+                hallucinations, then came back the next year to work on their
+                customer facing chatbot and the website content behind it. In
+                between, I work product flow at Best Buy and pick up flexible
+                shifts at Woodstone Country Club.
+              </p>
+              <p>
+                <a href="about.html">More about how I got here</a> or
+                <a href="experience.html">skip to the work history</a>.
+              </p>
+            </fieldset>
+
+            <fieldset>
+              <legend>At a Glance</legend>
+              <div class="tile-grid">
+                <fieldset>
+                  <legend>Certified</legend>
+                  <p>AWS, Cisco CCNA Introduction to Networks, TestOut PC Pro, plus
+                     Cisco cybersecurity and OS fundamentals.</p>
+                </fieldset>
+                <fieldset>
+                  <legend>Competed</legend>
+                  <p>CyberPatriot XVIII, second place gold tier at the Pennsylvania
+                     state round. SkillsUSA IT Servicing, second at districts.</p>
+                </fieldset>
+                <fieldset>
+                  <legend>Built</legend>
+                  <p>An AI hallucination detector, a structured chatbot FAQ system,
+                     and a WordPress deployment guide for a real client site.</p>
+                </fieldset>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Currently</legend>
+              <ul>
+                <li>Building out my homelab and messing with new PC builds</li>
+                <li>Studying for my next Cisco exam</li>
+                <li>Getting into buying and reselling electronics and computers</li>
+                <li>Open to networking and cybersecurity internships for next summer</li>
+              </ul>
+            </fieldset>
+
+          </main>
         </div>
-        <div class="module-body">
-          <p class="name">Aedan</p>
-          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
-          <p style="margin:0"><a href="contact.html">Send a message</a></p>
+
+        <!-- STATUS BAR -->
+        <div class="status-bar">
+          <p class="status-bar-field">Ready</p>
+          <p class="status-bar-field">Cybersecurity &amp; Networking student</p>
+          <p class="status-bar-field">MCTI</p>
         </div>
-      </section>
 
-      <!-- QUICK STATS WIDGET -->
-      <section class="module" aria-label="Quick facts">
-        <h2>The Basics</h2>
-        <div class="module-body">
-          <dl class="kv">
-            <dt>Location</dt>
-            <dd>Brodheadsville, PA</dd>
-            <dt>Studying</dt>
-            <dd>Computer Networking &amp; Security</dd>
-            <dt>Certs</dt>
-            <dd>AWS, CCNA ITN, TestOut PC Pro</dd>
-            <dt>Competes in</dt>
-            <dd>CyberPatriot, SkillsUSA</dd>
-            <dt>Working on</dt>
-            <dd>Home lab, Linux hardening practice</dd>
-          </dl>
-        </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- LINKS WIDGET -->
-      <section class="module tinted" aria-label="Links">
-        <h2>Elsewhere</h2>
-        <div class="module-body">
-          <ul class="stack">
-            <li><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></li>
-            <!-- Paste your real LinkedIn URL over the placeholder below -->
-            <li><a href="https://www.linkedin.com/in/your-linkedin-here">LinkedIn</a></li>
-            <li><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></li>
-          </ul>
-        </div>
-      </section>
-
-    </aside>
-
-    <!-- ===== MAIN COLUMN ===== -->
-    <main class="col-main">
-
-      <!-- INTRO BLURB -->
-      <section class="module">
-        <h2>Hey, I'm Aedan</h2>
-        <div class="module-body">
-          <p class="pull">
-            I'd rather take something apart, mess with it, and learn how to fix it
-            than just leave it alone.
-          </p>
-          <p>
-            I'm a networking student at Monroe Career &amp; Technical Institute,
-            still finishing high school at Pleasant Valley. I'm into technology,
-            computers, and figuring out how things work, especially networking,
-            cybersecurity, homelabs, and PC building. Anything that lets me actually
-            work with tech instead of just reading about it.
-          </p>
-          <p>
-            I've picked up experience through internships, school projects, and
-            messing with tech on my own. The last two summers I interned remotely at
-            Achyuraa, a tech services firm working in AI, cloud and managed services,
-            and cybersecurity. I built a prototype to catch AI hallucinations, then
-            came back the next year to work on their customer facing chatbot and the
-            website content behind it. In between, I work product flow at Best Buy
-            and pick up flexible shifts at Woodstone Country Club.
-          </p>
-          <p>
-            <a href="about.html">More about how I got here</a> or
-            <a href="experience.html">skip to the work history</a>.
-          </p>
-        </div>
-      </section>
-
-      <!-- AT A GLANCE: three quick tiles pointing at the other pages -->
-      <section class="module tinted">
-        <h2>At a Glance</h2>
-        <div class="module-body">
-          <div class="tile-grid">
-            <div class="tile">
-              <h4>Certified</h4>
-              <p>AWS, Cisco CCNA Introduction to Networks, TestOut PC Pro, plus Cisco
-                 cybersecurity and OS fundamentals.</p>
-            </div>
-            <div class="tile">
-              <h4>Competed</h4>
-              <p>CyberPatriot XVIII, second place gold tier at the Pennsylvania state
-                 round. SkillsUSA IT Servicing, second at districts.</p>
-            </div>
-            <div class="tile">
-              <h4>Built</h4>
-              <p>An AI hallucination detector, a structured chatbot FAQ system, and a
-                 WordPress deployment guide for a real client site.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- WHAT I'M UP TO: edit this list whenever something changes -->
-      <section class="module">
-        <h2>Currently</h2>
-        <div class="module-body">
-          <ul>
-            <li>Building out my homelab and messing with new PC builds</li>
-            <li>Studying for my next Cisco exam</li>
-            <li>Getting into buying and reselling electronics and computers</li>
-            <li>Open to networking and cybersecurity internships for next summer</li>
-          </ul>
-        </div>
-      </section>
-
-    </main>
   </div>
-
-  <!-- ------------------------------------------------------------------------
-       FOOTER (shared across pages)
-       ------------------------------------------------------------------------ -->
-  <footer class="site-foot">
-    <span>&copy; 2026 Aedan Johnson</span>
-    <span>built by hand in HTML and CSS, no frameworks</span>
-  </footer>
-
 </div>
+
 </body>
 </html>

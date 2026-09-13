@@ -3,230 +3,265 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Experience | Aedan Johnson</title>
+  <title>Aedan Johnson | Experience</title>
   <meta name="description" content="Work history: Achyuraa AI internships, Best Buy product flow, and Woodstone Country Club.">
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="frame">
+<div class="site-window window">
 
-  <!-- SITE HEADER (identical on every page) -->
-  <header class="site-head">
-    <div>
-      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
-      <p class="site-tagline">networking student who would rather take it apart than leave it alone</p>
+  <div class="title-bar">
+    <div class="title-bar-text">Aedan Johnson | Experience</div>
+    <div class="title-bar-controls">
+      <button aria-label="Minimize"></button>
+      <button aria-label="Maximize"></button>
+      <button aria-label="Close"></button>
     </div>
-    <p class="head-meta">
-      <span class="dot" aria-hidden="true"></span>online now<br>
-      profile views: 4,912
-    </p>
-  </header>
-
-  <nav aria-label="Main">
-    <ul class="nav">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a class="here" href="experience.html">Experience</a></li>
-      <li><a href="photos.html">Photos</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <div class="status-strip">
-    <p>two summers remote at an AI and cybersecurity firm &nbsp;&#9679;&nbsp; nights and weekends in retail &nbsp;&#9679;&nbsp; available for summer 2027</p>
   </div>
 
-  <div class="layout">
+  <div class="window-body">
 
-    <!-- ===== SIDEBAR ===== -->
-    <aside class="col-side">
+    <menu role="tablist">
+      <li role="tab"><a href="index.html">Home</a></li>
+      <li role="tab"><a href="about.html">About</a></li>
+      <li role="tab"><a href="skills.html">Skills</a></li>
+      <li role="tab" aria-selected="true"><a href="experience.html">Experience</a></li>
+      <li role="tab"><a href="photos.html">Photos</a></li>
+      <li role="tab"><a href="contact.html">Contact</a></li>
+    </menu>
 
-      <section class="module profile-card" aria-label="Profile">
-        <div class="photo-frame">
-          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
-               width="600" height="700">
+    <div class="window" role="tabpanel">
+      <div class="window-body">
+
+        <div class="layout">
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="col-side">
+
+            <fieldset class="profile-card">
+              <legend>Aedan Johnson</legend>
+              <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+                   width="600" height="700">
+              <p class="name">Aedan</p>
+              <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+            </fieldset>
+
+            <!-- TREE VIEW TIMELINE: expand a year to see what happened -->
+            <fieldset>
+              <legend>Timeline</legend>
+              <ul class="tree-view">
+                <li>
+                  <details open>
+                    <summary>2026</summary>
+                    <ul>
+                      <li>Woodstone Country Club, April to present</li>
+                      <li>Achyuraa chatbot internship, summer</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>2025</summary>
+                    <ul>
+                      <li>Best Buy, September to present</li>
+                      <li>Achyuraa AI internship, summer</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>2023 to 2024</summary>
+                    <ul>
+                      <li>Pleasant Valley School District, summers</li>
+                    </ul>
+                  </details>
+                </li>
+                <li>
+                  <details>
+                    <summary>2017 to 2022</summary>
+                    <ul>
+                      <li>Boy Scouts of America, patrol leader</li>
+                    </ul>
+                  </details>
+                </li>
+              </ul>
+            </fieldset>
+
+            <fieldset>
+              <legend>Code</legend>
+              <p style="margin: 0; font-size: 12px">
+                Internship portfolio repo:<br>
+                <a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a>
+              </p>
+            </fieldset>
+
+          </aside>
+
+          <!-- ===== MAIN COLUMN ===== -->
+          <main class="col-main">
+
+            <!-- TECHNICAL EXPERIENCE
+                 Each job is its own nested fieldset. Copy one to add a role. -->
+            <fieldset>
+              <legend>Technical Experience</legend>
+
+              <fieldset>
+                <legend>AI Chatbot Development Intern</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2026 to August 2026
+                </p>
+                <ul>
+                  <li>Wrote website and chatbot content, turning internal service
+                      descriptions into copy a customer could actually read</li>
+                  <li>Organized the chatbot knowledge base into a structured FAQ
+                      system so answers were findable instead of buried</li>
+                  <li>Built a WordPress guide covering content deployment, Beaver
+                      Builder, and SEO requirements for the team to reuse</li>
+                  <li>Supported the ticket handoff and contact workflows that route
+                      a customer from the bot to a human</li>
+                </ul>
+              </fieldset>
+
+              <br>
+
+              <fieldset>
+                <legend>Artificial Intelligence Engineer Intern</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2025 to August 2025
+                </p>
+                <ul>
+                  <li>Prototyped a local system that detects AI hallucinations
+                      using machine learning techniques</li>
+                  <li>Cleaned, structured, and prepared raw datasets for model
+                      experimentation</li>
+                  <li>Tested and benchmarked multiple models for accuracy, then
+                      charted the results so the comparison was obvious at a
+                      glance</li>
+                  <li>Documented workflows and findings so the work could be
+                      picked up after the internship ended</li>
+                  <li>Wrote and maintained code, tested AI systems, and took part
+                      in code reviews with the team</li>
+                </ul>
+                <p style="margin: 0; font-size: 12px">
+                  Code and writeups:
+                  <a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a>
+                </p>
+              </fieldset>
+
+            </fieldset>
+
+            <!-- CURRENT JOBS -->
+            <fieldset>
+              <legend>Currently Working</legend>
+
+              <fieldset>
+                <legend>Product Flow Specialist</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Best Buy &nbsp;/&nbsp; Bethlehem, PA &nbsp;/&nbsp; September 2025
+                  to present
+                </p>
+                <ul>
+                  <li>Receive, organize, and stage inventory for the sales floor
+                      and online orders</li>
+                  <li>Pick, pack, and ship customer orders accurately under daily
+                      volume targets</li>
+                  <li>Maintain warehouse organization and inventory accuracy in
+                      internal systems</li>
+                  <li>Replenish the sales floor and follow safety procedures while
+                      handling high value merchandise</li>
+                </ul>
+              </fieldset>
+
+              <br>
+
+              <fieldset>
+                <legend>Dishwasher and Kitchen Support</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Woodstone Country Club &nbsp;/&nbsp; Danielsville, PA &nbsp;/&nbsp;
+                  April 2026 to present
+                </p>
+                <ul>
+                  <li>Run industrial dishwashing equipment through high volume
+                      service</li>
+                  <li>Keep kitchen equipment, dishes, and work areas clean and
+                      compliant with health and safety standards</li>
+                  <li>Support kitchen staff with organization and basic prep</li>
+                  <li>Flexible scheduling around school and my other job</li>
+                </ul>
+              </fieldset>
+
+            </fieldset>
+
+            <!-- EARLIER EXPERIENCE -->
+            <fieldset>
+              <legend>Earlier</legend>
+
+              <fieldset>
+                <legend>Student Summer Maintenance Technician</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Pleasant Valley School District &nbsp;/&nbsp; Brodheadsville, PA
+                  &nbsp;/&nbsp; Summers 2023 and 2024
+                </p>
+                <ul>
+                  <li>Maintained school facilities and supported district
+                      operations</li>
+                  <li>Cleaned and prepared classrooms, lockers, and common areas</li>
+                  <li>Moved and organized furniture and equipment, and helped
+                      teachers set up rooms before the school year</li>
+                </ul>
+              </fieldset>
+
+              <br>
+
+              <fieldset>
+                <legend>Patrol Leader</legend>
+                <p style="margin: 0 0 8px; font-size: 12px">
+                  Boy Scouts of America &nbsp;/&nbsp; Northampton, PA &nbsp;/&nbsp;
+                  May 2017 to June 2022
+                </p>
+                <ul>
+                  <li>Led and mentored younger scouts through meetings and
+                      activities</li>
+                  <li>Planned and ran lessons on merit badges and camping
+                      preparation</li>
+                  <li>Coordinated Eagle Scout service projects including grounds
+                      clearing and construction</li>
+                  <li>Earned the rank of Life Scout</li>
+                </ul>
+              </fieldset>
+
+            </fieldset>
+
+            <!-- EDUCATION -->
+            <fieldset>
+              <legend>Education</legend>
+              <p style="margin: 0 0 4px"><strong>Monroe Career &amp; Technical Institute</strong></p>
+              <p style="margin: 0 0 10px; font-size: 12px">
+                Bartonsville, PA &nbsp;/&nbsp; Computer Networking &amp; Security
+                &nbsp;/&nbsp; August 2024 to present
+              </p>
+              <p style="margin: 0 0 4px"><strong>Pleasant Valley High School</strong></p>
+              <p style="margin: 0; font-size: 12px">
+                Brodheadsville, PA &nbsp;/&nbsp; General Academics &nbsp;/&nbsp;
+                August 2023 to present
+              </p>
+            </fieldset>
+
+          </main>
         </div>
-        <div class="module-body">
-          <p class="name">Aedan</p>
-          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+
+        <div class="status-bar">
+          <p class="status-bar-field">Ready</p>
+          <p class="status-bar-field">Two summers at an AI and cybersecurity firm</p>
+          <p class="status-bar-field">Available for summer 2027</p>
         </div>
-      </section>
 
-      <!-- TIMELINE WIDGET: this one really is a sequence, so dates work here -->
-      <section class="module tinted" aria-label="Timeline">
-        <h2>Timeline</h2>
-        <div class="module-body">
-          <dl class="kv">
-            <dt>2026, April to now</dt>
-            <dd>Woodstone Country Club</dd>
-            <dt>2026, summer</dt>
-            <dd>Achyuraa, chatbot development</dd>
-            <dt>2025, Sept to now</dt>
-            <dd>Best Buy, product flow</dd>
-            <dt>2025, summer</dt>
-            <dd>Achyuraa, AI engineering</dd>
-            <dt>2023 &amp; 2024 summers</dt>
-            <dd>Pleasant Valley School District</dd>
-            <dt>2017 to 2022</dt>
-            <dd>Boy Scouts of America</dd>
-          </dl>
-        </div>
-      </section>
+      </div>
+    </div>
 
-      <!-- PROJECT LINK WIDGET -->
-      <section class="module" aria-label="Portfolio">
-        <h2>Code</h2>
-        <div class="module-body">
-          <p style="margin:0;font-size:12px">
-            Internship portfolio repo:<br>
-            <a href="https://github.com/Aedan-Johnson/Internship_Portfolio">github.com/Aedan-Johnson/Internship_Portfolio</a>
-          </p>
-        </div>
-      </section>
-
-    </aside>
-
-    <!-- ===== MAIN COLUMN ===== -->
-    <main class="col-main">
-
-      <!-- TECHNICAL EXPERIENCE
-           Each role is one <article class="job">. Copy a whole article block
-           to add a new job. The dashed divider between them is automatic. -->
-      <section class="module">
-        <h2>Technical Experience</h2>
-        <div class="module-body">
-
-          <article class="job">
-            <h3>AI Chatbot Development Intern</h3>
-            <p class="job-meta">Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2026 to August 2026</p>
-            <ul>
-              <li>Wrote website and chatbot content, turning internal service
-                  descriptions into copy a customer could actually read</li>
-              <li>Organized the chatbot knowledge base into a structured FAQ system so
-                  answers were findable instead of buried</li>
-              <li>Built a WordPress guide covering content deployment, Beaver Builder,
-                  and SEO requirements for the team to reuse</li>
-              <li>Supported the ticket handoff and contact workflows that route a
-                  customer from the bot to a human</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <h3>Artificial Intelligence Engineer Intern</h3>
-            <p class="job-meta">Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2025 to August 2025</p>
-            <ul>
-              <li>Prototyped a local system that detects AI hallucinations using
-                  machine learning techniques</li>
-              <li>Cleaned, structured, and prepared raw datasets for model
-                  experimentation</li>
-              <li>Tested and benchmarked multiple models for accuracy, then charted the
-                  results so the comparison was obvious at a glance</li>
-              <li>Documented workflows and findings so the work could be picked up
-                  after the internship ended</li>
-              <li>Wrote and maintained code, tested AI systems, and took part in
-                  code reviews with the team</li>
-            </ul>
-            <p class="note">
-              Code and writeups:
-              <a href="https://github.com/Aedan-Johnson/Internship_Portfolio">Internship_Portfolio on GitHub</a>
-            </p>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- CURRENT JOBS -->
-      <section class="module tinted">
-        <h2>Currently Working</h2>
-        <div class="module-body">
-
-          <article class="job">
-            <h3>Product Flow Specialist</h3>
-            <p class="job-meta">Best Buy &nbsp;/&nbsp; Bethlehem, PA &nbsp;/&nbsp; September 2025 to present</p>
-            <ul>
-              <li>Receive, organize, and stage inventory for the sales floor and
-                  online orders</li>
-              <li>Pick, pack, and ship customer orders accurately under daily volume
-                  targets</li>
-              <li>Maintain warehouse organization and inventory accuracy in internal
-                  systems</li>
-              <li>Replenish the sales floor and follow safety procedures while handling
-                  high value merchandise</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <h3>Dishwasher and Kitchen Support</h3>
-            <p class="job-meta">Woodstone Country Club &nbsp;/&nbsp; Danielsville, PA &nbsp;/&nbsp; April 2026 to present</p>
-            <ul>
-              <li>Run industrial dishwashing equipment through high volume service</li>
-              <li>Keep kitchen equipment, dishes, and work areas clean and compliant
-                  with health and safety standards</li>
-              <li>Support kitchen staff with organization and basic prep</li>
-              <li>Flexible scheduling around school and my other job</li>
-            </ul>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- EARLIER EXPERIENCE
-           Keep this section if you want the full history, delete it once your
-           technical experience fills the page. -->
-      <section class="module">
-        <h2>Earlier</h2>
-        <div class="module-body">
-
-          <article class="job">
-            <h3>Student Summer Maintenance Technician</h3>
-            <p class="job-meta">Pleasant Valley School District &nbsp;/&nbsp; Brodheadsville, PA &nbsp;/&nbsp; Summers 2023 and 2024</p>
-            <ul>
-              <li>Maintained school facilities and supported district operations</li>
-              <li>Cleaned and prepared classrooms, lockers, and common areas</li>
-              <li>Moved and organized furniture and equipment, and helped teachers set
-                  up rooms before the school year</li>
-            </ul>
-          </article>
-
-          <article class="job">
-            <h3>Patrol Leader</h3>
-            <p class="job-meta">Boy Scouts of America &nbsp;/&nbsp; Northampton, PA &nbsp;/&nbsp; May 2017 to June 2022</p>
-            <ul>
-              <li>Led and mentored younger scouts through meetings and activities</li>
-              <li>Planned and ran lessons on merit badges and camping preparation</li>
-              <li>Coordinated Eagle Scout service projects including grounds clearing
-                  and construction</li>
-              <li>Earned the rank of Life Scout</li>
-            </ul>
-          </article>
-
-        </div>
-      </section>
-
-      <!-- EDUCATION -->
-      <section class="module tinted">
-        <h2>Education</h2>
-        <div class="module-body">
-          <article class="job">
-            <h3>Monroe Career &amp; Technical Institute</h3>
-            <p class="job-meta">Bartonsville, PA &nbsp;/&nbsp; Computer Networking &amp; Security &nbsp;/&nbsp; August 2024 to present</p>
-          </article>
-          <article class="job">
-            <h3>Pleasant Valley High School</h3>
-            <p class="job-meta">Brodheadsville, PA &nbsp;/&nbsp; General Academics &nbsp;/&nbsp; August 2023 to present</p>
-          </article>
-        </div>
-      </section>
-
-    </main>
   </div>
-
-  <footer class="site-foot">
-    <span>&copy; 2026 Aedan Johnson</span>
-    <span>built by hand in HTML and CSS, no frameworks</span>
-  </footer>
-
 </div>
+
 </body>
 </html>
