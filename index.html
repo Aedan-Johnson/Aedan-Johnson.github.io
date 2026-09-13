@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aedan Johnson | Cybersecurity &amp; Networking Student</title>
+  <meta name="description" content="Personal profile of Aedan Johnson, a cybersecurity and networking student at Monroe Career and Technical Institute.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ==========================================================================
+     PAGE FRAME
+     Everything sits inside .frame so it floats on the tiled background.
+     ========================================================================== -->
+<div class="frame">
+
+  <!-- ------------------------------------------------------------------------
+       SITE HEADER
+       Same on every page. Edit the title and tagline here, then paste the
+       identical block into the other five pages.
+       ------------------------------------------------------------------------ -->
+  <header class="site-head">
+    <div>
+      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
+      <p class="site-tagline">networks, defense, and the occasional model that actually trains</p>
+    </div>
+    <p class="head-meta">
+      <span class="dot" aria-hidden="true"></span>online now<br>
+      profile views: 4,912
+    </p>
+  </header>
+
+  <!-- ------------------------------------------------------------------------
+       SHARED NAV
+       To mark the current page, put class="here" on that one link.
+       ------------------------------------------------------------------------ -->
+  <nav aria-label="Main">
+    <ul class="nav">
+      <li><a class="here" href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="photos.html">Photos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ------------------------------------------------------------------------
+       STATUS STRIP
+       One scrolling line of text. Change the sentence to whatever you want.
+       It stops scrolling automatically for visitors who reduce motion.
+       ------------------------------------------------------------------------ -->
+  <div class="status-strip">
+    <p>currently: hardening a lab VM and studying for the next Cisco exam &nbsp;&#9679;&nbsp; mood: caffeinated &nbsp;&#9679;&nbsp; last updated: September 2026</p>
+  </div>
+
+  <!-- ------------------------------------------------------------------------
+       MAIN LAYOUT: sidebar + main column
+       ------------------------------------------------------------------------ -->
+  <div class="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="col-side">
+
+      <!-- PROFILE PHOTO BOX
+           Replace images/profile.jpg with your own photo. A square or
+           portrait crop around 600px wide looks best. -->
+      <section class="module profile-card" aria-label="Profile">
+        <div class="photo-frame">
+          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+               width="600" height="700">
+        </div>
+        <div class="module-body">
+          <p class="name">Aedan</p>
+          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+          <p style="margin:0"><a href="contact.html">Send a message</a></p>
+        </div>
+      </section>
+
+      <!-- QUICK STATS WIDGET -->
+      <section class="module" aria-label="Quick facts">
+        <h2>The Basics</h2>
+        <div class="module-body">
+          <dl class="kv">
+            <dt>Location</dt>
+            <dd>Brodheadsville, PA</dd>
+            <dt>Studying</dt>
+            <dd>Computer Networking &amp; Security</dd>
+            <dt>Certs</dt>
+            <dd>AWS, CCNA ITN, TestOut PC Pro</dd>
+            <dt>Competes in</dt>
+            <dd>CyberPatriot, SkillsUSA</dd>
+            <dt>Working on</dt>
+            <dd>Home lab, Linux hardening practice</dd>
+          </dl>
+        </div>
+      </section>
+
+      <!-- LINKS WIDGET -->
+      <section class="module tinted" aria-label="Links">
+        <h2>Elsewhere</h2>
+        <div class="module-body">
+          <ul class="stack">
+            <li><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></li>
+            <!-- Paste your real LinkedIn URL over the placeholder below -->
+            <li><a href="https://www.linkedin.com/in/your-linkedin-here">LinkedIn</a></li>
+            <li><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- ===== MAIN COLUMN ===== -->
+    <main class="col-main">
+
+      <!-- INTRO BLURB -->
+      <section class="module">
+        <h2>Hey, I'm Aedan</h2>
+        <div class="module-body">
+          <p class="pull">
+            I break things on purpose in a lab so they stay standing everywhere else.
+          </p>
+          <p>
+            I study computer networking and security at Monroe Career &amp; Technical
+            Institute while finishing high school at Pleasant Valley. Most of my time
+            goes to three things: locking down systems, learning how traffic actually
+            moves across a network, and figuring out where machine learning is useful
+            versus where it is just noise.
+          </p>
+          <p>
+            Last two summers I interned remotely at Achyuraa, a tech services firm
+            working in AI, cloud and managed services, and cybersecurity. I prototyped
+            a system to catch AI hallucinations, then came back the following year to
+            build out a customer facing chatbot and the website content behind it.
+            In between, I work product flow at Best Buy and pick up flexible shifts at
+            Woodstone Country Club.
+          </p>
+          <p>
+            <a href="about.html">More about how I got here</a> or
+            <a href="experience.html">skip to the work history</a>.
+          </p>
+        </div>
+      </section>
+
+      <!-- AT A GLANCE: three quick tiles pointing at the other pages -->
+      <section class="module tinted">
+        <h2>At a Glance</h2>
+        <div class="module-body">
+          <div class="tile-grid">
+            <div class="tile">
+              <h4>Certified</h4>
+              <p>AWS, Cisco CCNA Introduction to Networks, TestOut PC Pro, plus Cisco
+                 cybersecurity and OS fundamentals.</p>
+            </div>
+            <div class="tile">
+              <h4>Competed</h4>
+              <p>CyberPatriot XVIII, second place gold tier at the Pennsylvania state
+                 round. SkillsUSA IT Servicing, second at districts.</p>
+            </div>
+            <div class="tile">
+              <h4>Built</h4>
+              <p>An ML hallucination detector, a structured chatbot FAQ system, and a
+                 WordPress deployment guide for a real client site.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHAT I'M UP TO: edit this list whenever something changes -->
+      <section class="module">
+        <h2>Currently</h2>
+        <div class="module-body">
+          <ul>
+            <li>Studying for my next Cisco exam and expanding the home lab</li>
+            <li>Running Windows and Linux hardening drills for CyberPatriot season</li>
+            <li>Cleaning up my internship portfolio repo on GitHub</li>
+            <li>Open to IT, networking, and security internships for next summer</li>
+          </ul>
+          <hr class="rule">
+          <p class="note">
+            Editing tip: this module is a plain &lt;ul&gt;. Swap the list items and the
+            page stays laid out exactly the same.
+          </p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- ------------------------------------------------------------------------
+       FOOTER (shared across pages)
+       ------------------------------------------------------------------------ -->
+  <footer class="site-foot">
+    <span>&copy; 2026 Aedan Johnson</span>
+    <span>built by hand in HTML and CSS, no frameworks</span>
+  </footer>
+
+</div>
+</body>
+</html>
