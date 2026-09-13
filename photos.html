@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Photos | Aedan Johnson</title>
+  <meta name="description" content="Photo gallery: competitions, lab work, and projects.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="frame">
+
+  <!-- SITE HEADER (identical on every page) -->
+  <header class="site-head">
+    <div>
+      <h1 class="site-title"><a href="index.html">Aedan Johnson</a></h1>
+      <p class="site-tagline">networking student who would rather take it apart than leave it alone</p>
+    </div>
+    <p class="head-meta">
+      <span class="dot" aria-hidden="true"></span>online now<br>
+      profile views: 4,912
+    </p>
+  </header>
+
+  <nav aria-label="Main">
+    <ul class="nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a class="here" href="photos.html">Photos</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="status-strip">
+    <p>click any photo to enlarge it &nbsp;&#9679;&nbsp; press Esc to close &nbsp;&#9679;&nbsp; more coming after this competition season</p>
+  </div>
+
+  <div class="layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="col-side">
+
+      <section class="module profile-card" aria-label="Profile">
+        <div class="photo-frame">
+          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
+               width="600" height="700">
+        </div>
+        <div class="module-body">
+          <p class="name">Aedan</p>
+          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+        </div>
+      </section>
+
+      <!-- HOW TO ADD PHOTOS: a note to yourself, delete it before publishing -->
+      <section class="module tinted" aria-label="Gallery notes">
+        <h2>Adding Photos</h2>
+        <div class="module-body">
+          <p class="note" style="margin:0">
+            The CyberPatriot graphic is in. Three slots left: photo-2.jpg (SkillsUSA),
+            photo-5.jpg (bench work), photo-6.jpg (Scouts). Drop files into the images
+            folder using those names, or rename the src attributes. Around 1200px wide
+            is plenty. Update each caption and the alt text to match.
+          </p>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- ===== MAIN COLUMN ===== -->
+    <main class="col-main">
+
+      <!-- PHOTO GRID
+           Every photo is one <figure>. The <button class="shot"> wrapper is
+           what makes it clickable and keyboard reachable. To add a photo,
+           copy a whole <figure> block and change:
+             1. the img src and alt
+             2. the data-full attribute (the large version to show enlarged)
+             3. the caption text
+           If you only have one size of each photo, point data-full at the
+           same file as the src. -->
+      <section class="module">
+        <h2>Photo Gallery</h2>
+        <div class="module-body">
+          <div class="gallery">
+
+            <figure>
+              <button class="shot" type="button"
+                      data-full="images/cyberpatriot-18.png"
+                      data-caption="Official CyberPatriot XVIII graphic, National Youth Cyber Defense Competition.">
+                <img src="images/cyberpatriot-18.png"
+                     alt="CyberPatriot XVIII, National Youth Cyber Defense Competition graphic"
+                     width="800" height="600" loading="lazy">
+              </button>
+              <figcaption>
+                <b>CyberPatriot XVIII</b>
+                State round, second place gold tier.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <button class="shot" type="button"
+                      data-full="images/photo-2.jpg"
+                      data-caption="SkillsUSA IT Servicing at districts. Diagnose, repair, explain, repeat.">
+                <img src="images/photo-2.jpg"
+                     alt="SkillsUSA IT Servicing competition setup"
+                     width="800" height="600" loading="lazy">
+              </button>
+              <figcaption>
+                <b>SkillsUSA</b>
+                IT Servicing, second at districts.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <button class="shot" type="button"
+                      data-full="images/photo-5.jpg"
+                      data-caption="Bench work: diagnosis, teardown, and putting it back together so it boots.">
+                <img src="images/photo-5.jpg"
+                     alt="Desktop computer opened up on a workbench"
+                     width="800" height="600" loading="lazy">
+              </button>
+              <figcaption>
+                <b>Bench work</b>
+                Hardware troubleshooting at MCTI.
+              </figcaption>
+            </figure>
+
+            <figure>
+              <button class="shot" type="button"
+                      data-full="images/photo-6.jpg"
+                      data-caption="Scouts. Six years, one Life Scout rank, and a lot of camp setups.">
+                <img src="images/photo-6.jpg"
+                     alt="Scouting campsite"
+                     width="800" height="600" loading="lazy">
+              </button>
+              <figcaption>
+                <b>Scouts</b>
+                Patrol leader, 2017 to 2022.
+              </figcaption>
+            </figure>
+
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-foot">
+    <span>&copy; 2026 Aedan Johnson</span>
+    <span>built by hand in HTML and CSS, no frameworks</span>
+  </footer>
+</div>
+
+<!-- ==========================================================================
+     LIGHTBOX OVERLAY
+     Empty until a thumbnail is clicked. Lives outside .frame so it can cover
+     the whole screen.
+     ========================================================================== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo" hidden>
+  <div>
+    <button class="close" type="button" id="lightbox-close">Close &times;</button>
+    <figure>
+      <img id="lightbox-img" src="" alt="">
+      <figcaption id="lightbox-caption"></figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- ==========================================================================
+     GALLERY SCRIPT
+     The only JavaScript on the site. About 30 lines, no libraries.
+     What it does:
+       - click a thumbnail, copy its data-full and data-caption into the overlay
+       - close on the Close button, on a click outside the photo, or on Esc
+       - return keyboard focus to the thumbnail you opened
+     If JavaScript is off, the page is still a perfectly readable grid.
+     ========================================================================== -->
+<script>
+(function () {
+  var box     = document.getElementById('lightbox');
+  var boxImg  = document.getElementById('lightbox-img');
+  var boxCap  = document.getElementById('lightbox-caption');
+  var closeBt = document.getElementById('lightbox-close');
+  var opener  = null;   // remembers which thumbnail was clicked
+
+  function open(button) {
+    opener = button;
+    var thumb = button.querySelector('img');
+    boxImg.src = button.getAttribute('data-full') || thumb.src;
+    boxImg.alt = thumb.alt;
+    boxCap.textContent = button.getAttribute('data-caption') || '';
+    box.hidden = false;
+    box.classList.add('open');
+    closeBt.focus();
+  }
+
+  function close() {
+    box.classList.remove('open');
+    box.hidden = true;
+    boxImg.src = '';
+    if (opener) { opener.focus(); opener = null; }
+  }
+
+  // Wire up every thumbnail button
+  var shots = document.querySelectorAll('.gallery button.shot');
+  for (var i = 0; i < shots.length; i++) {
+    shots[i].addEventListener('click', function () { open(this); });
+  }
+
+  closeBt.addEventListener('click', close);
+
+  // Click on the dark area around the photo closes it too
+  box.addEventListener('click', function (e) { if (e.target === box) close(); });
+
+  // Esc closes it
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !box.hidden) close();
+  });
+})();
+</script>
+
+</body>
+</html>
