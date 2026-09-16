@@ -14,6 +14,22 @@
 <body>
 
 <!-- ==========================================================================
+     BOOT SCREEN
+     Fake Windows 98 startup, shown once per browser session. Logic lives in
+     boot.js. Click, press a key, or wait it out.
+     ========================================================================== -->
+<div id="boot-screen">
+  <div class="boot-inner">
+    <div class="boot-logo">Windows<span>98</span></div>
+    <div class="boot-sub">Aedan Johnson Edition</div>
+    <div class="progress-indicator segmented boot-progress">
+      <span class="progress-indicator-bar"></span>
+    </div>
+    <p class="boot-hint">Starting up&hellip; (click to skip)</p>
+  </div>
+</div>
+
+<!-- ==========================================================================
      OUTER WINDOW
      Every page is one 98.css "window". Copy this whole title-bar block onto
      other pages and just change the title-bar-text.
@@ -170,5 +186,6 @@
   </div>
 </div>
 
+<script src="boot.js" defer></script>
 </body>
 </html>
