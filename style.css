@@ -11,7 +11,7 @@
 
 :root {
   --desktop: #008080;   /* classic Windows 98 desktop teal */
-  --frame:   960px;     /* max width of the page window */
+  --frame:   1100px;    /* max width of the page window */
 }
 
 * { box-sizing: border-box; }
@@ -29,6 +29,16 @@ body {
 .site-window {
   max-width: var(--frame);
   margin: 0 auto;
+}
+
+/* 98.css hardcodes small pixel font sizes (11-12px) and fixed control
+   sizes, so a plain font-size override doesn't scale everything. `zoom`
+   scales the whole rendered subtree at once, same as browser page zoom,
+   so text, borders, padding, and images all grow together. Scoped to
+   wider screens only, since zooming the mobile single column layout would
+   push it wider than the viewport. */
+@media (min-width: 900px) {
+  .site-window { zoom: 1.3; }
 }
 
 /* Let the tab row wrap on narrow screens instead of overflowing */
