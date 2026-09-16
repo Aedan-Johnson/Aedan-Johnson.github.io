@@ -1,4 +1,4 @@
-# aedan-site
+# About_Me_Website
 
 My personal site, styled like an old MySpace / SpaceHey profile: one long
 scrolling page with navy and tan module boxes instead of separate tabbed
