@@ -116,6 +116,12 @@ fieldset { margin: 0; }
 }
 .gallery button.shot img {
   width: 100%;
+  /* The width/height attributes on each <img> map to implicit box
+     dimensions. Without an explicit height here, that mapped height stays
+     fixed at whatever the attribute says (e.g. 600px) and aspect-ratio has
+     nothing "auto" left to compute, so the image gets squashed into a
+     narrow, way-too-tall box instead of a 4:3 one. */
+  height: auto;
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
