@@ -1,17 +1,25 @@
 /* ==========================================================================
    style.css
-   Site specific layout, loaded AFTER 98.css in every page's <head>.
-
-   98.css (https://jdan.github.io/98.css) already draws every classic
-   Windows 98 control: windows, title bars, group boxes (fieldset), tabs,
-   tables, status bars, progress bars. This file only adds the things
-   98.css does not provide on its own: the teal desktop background, the
-   two column page layout, the photo gallery grid, and mobile breakpoints.
+   A SpaceHey / early-2000s social profile look, built from scratch (no
+   external CSS library). One long scrolling page, module boxes with a
+   navy or tan header bar, a two column layout, and a boot screen intro.
    ========================================================================== */
 
 :root {
-  --desktop: #008080;   /* classic Windows 98 desktop teal */
-  --frame:   960px;     /* max width of the page window */
+  --page-bg:      #e9edf6;
+  --navy-dark:    #142a63;
+  --navy:         #1b3f8b;
+  --navy-light:   #4477c4;
+  --module-border:#7a95c0;
+  --tan-bg:       #f1e9d2;
+  --tan-header:   #9c8a4e;
+  --tan-border:   #b8a86f;
+  --card-bg:      #ffffff;
+  --text:         #222222;
+  --text-muted:   #555555;
+  --link:         #0033cc;
+  --accent-label: #cc3300;
+  --frame:        1080px;
 }
 
 * { box-sizing: border-box; }
@@ -19,53 +27,157 @@
 body {
   margin: 0;
   min-height: 100vh;
-  padding: 20px 10px 40px;
-  background: var(--desktop);
+  background: var(--page-bg);
+  color: var(--text);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
-/* The outer window every page sits inside. Keeping this as its own class
-   (separate from 98.css's plain .window) lets us set a max width without
-   touching 98.css itself. */
-.site-window {
+a { color: var(--link); }
+a:hover { text-decoration: underline; }
+
+h1, h2, h3 { margin: 0; }
+
+img { max-width: 100%; display: block; }
+
+
+/* ==========================================================================
+   SITE HEADER
+   ========================================================================== */
+.site-header {
+  background: linear-gradient(135deg, var(--navy-dark), var(--navy-light));
+  border-bottom: 3px solid var(--navy-dark);
+}
+.site-header-inner {
   max-width: var(--frame);
   margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
-
-/* Let the tab row wrap on narrow screens instead of overflowing */
-menu[role="tablist"] { flex-wrap: wrap; row-gap: 2px; }
+.site-brand { display: flex; align-items: center; gap: 10px; }
+.brand-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 6px;
+  background: #fff;
+  color: var(--navy);
+  font-weight: bold;
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+.brand-name {
+  margin: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+}
+.brand-tagline {
+  margin: 2px 0 0;
+  color: #dbe6f8;
+  font-size: 11px;
+}
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.site-nav a {
+  display: inline-block;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.site-nav a:hover { background: rgba(255, 255, 255, 0.25); }
 
 
 /* ==========================================================================
-   TWO COLUMN LAYOUT
-   Sidebar (profile box + widgets) on the left, main content on the right.
+   PAGE FRAME AND LAYOUT
    ========================================================================== */
-.layout {
+.page-frame {
+  max-width: var(--frame);
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.profile-layout {
   display: grid;
   grid-template-columns: 230px minmax(0, 1fr);
-  gap: 12px;
-  padding: 10px 2px;
+  gap: 14px;
 }
 .col-side > * + *,
-.col-main > * + * { margin-top: 12px; }
-
-fieldset { margin: 0; }
+.col-main > * + * { margin-top: 14px; }
 
 
 /* ==========================================================================
-   PROFILE PHOTO BOX
+   MODULE BOX
+   Every bordered box on the page: navy header bar + white content area,
+   with a tan variant for secondary widgets.
+   ========================================================================== */
+.module {
+  background: var(--card-bg);
+  border: 1px solid var(--module-border);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+}
+.module-header {
+  margin: 0;
+  background: linear-gradient(180deg, var(--navy-light), var(--navy));
+  color: #fff;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 6px 10px;
+}
+.module--tan .module-header {
+  background: linear-gradient(180deg, #c9b978, var(--tan-header));
+  color: #2a2410;
+}
+.module-body { padding: 12px; }
+
+.sub-label {
+  color: var(--accent-label);
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  margin: 16px 0 6px;
+}
+.sub-label:first-child { margin-top: 0; }
+
+.module-body p { margin: 0 0 10px; }
+.module-body p:last-child { margin-bottom: 0; }
+.module-body ul { margin: 0 0 10px; padding-left: 20px; }
+.module-body ul:last-child { margin-bottom: 0; }
+
+
+/* ==========================================================================
+   PROFILE CARD
    ========================================================================== */
 .profile-card { text-align: center; }
 .profile-card img {
   width: 100%;
   max-width: 190px;
-  border: 2px solid #45443f;
+  margin: 0 auto;
+  border: 2px solid var(--module-border);
 }
 .profile-card .name { font-weight: bold; margin: 8px 0 2px; }
-.profile-card .role { font-size: 11px; margin: 0; }
+.profile-card .role { font-size: 11px; margin: 0; color: var(--text-muted); }
 
 
 /* ==========================================================================
-   SMALL WIDGET HELPERS (sidebar key/value lists and link stacks)
+   SMALL WIDGET HELPERS
    ========================================================================== */
 .kv { margin: 0; font-size: 12px; }
 .kv dt { font-weight: bold; }
@@ -73,84 +185,150 @@ fieldset { margin: 0; }
 .kv dd:last-child { margin-bottom: 0; }
 
 .stack { margin: 0; padding: 0; list-style: none; font-size: 12px; }
-.stack li + li { margin-top: 6px; padding-top: 6px; border-top: 1px dotted #888; }
+.stack li + li { margin-top: 6px; padding-top: 6px; border-top: 1px dotted var(--tan-border); }
 
 
 /* ==========================================================================
-   TILE GRID
-   Used for "At a Glance" style groups of small fieldsets side by side.
+   INTEREST TILE GRIDS (music, movies, garage extras)
    ========================================================================== */
 .tile-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 10px;
+  margin: 0 0 16px;
 }
-.tile-grid fieldset { margin: 0; }
+.tile-grid--square { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.tile-grid--poster { grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); }
+.tile-grid--mixed { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); align-items: start; }
+
+.tile {
+  margin: 0;
+  text-align: center;
+}
+.tile img {
+  width: 100%;
+  border: 1px solid var(--module-border);
+  background: #ddd;
+}
+.tile-grid--square .tile img,
+.tile-grid--mixed .tile:not(.tile--tall) img { aspect-ratio: 1 / 1; object-fit: cover; height: auto; }
+.tile-grid--poster .tile img { aspect-ratio: 2 / 3; object-fit: cover; height: auto; }
+.tile--tall img { aspect-ratio: 2 / 3; object-fit: cover; height: auto; }
+.tile figcaption {
+  margin-top: 4px;
+  font-size: 11px;
+}
 
 
 /* ==========================================================================
-   PHOTO GALLERY
+   THE GARAGE
    ========================================================================== */
-.gallery {
+.garage-layout {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 12px;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 14px;
+  align-items: start;
+  margin-bottom: 16px;
 }
-.gallery button.shot {
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: none;
-  cursor: pointer;
-}
-.gallery button.shot img {
+.garage-photo {
   width: 100%;
   aspect-ratio: 4 / 3;
   object-fit: cover;
+  border: 1px solid var(--module-border);
+  background: #ddd;
 }
-.gallery figcaption {
-  margin-top: 4px;
-  font-size: 11px;
-  text-align: center;
-}
-
-/* Lightbox overlay: a 98.css "window" floated over a dimmed backdrop */
-.lightbox {
-  position: fixed;
-  inset: 0;
-  display: none;
-  place-items: center;
-  padding: 20px;
-  background: rgba(0, 0, 0, .55);
-  z-index: 50;
-}
-.lightbox.open { display: grid; }
-.lightbox .window { width: 100%; max-width: 640px; }
-.lightbox img {
-  display: block;
+.spec-table {
   width: 100%;
-  max-height: 60vh;
-  object-fit: contain;
-  background: #000;
+  border-collapse: collapse;
+  font-size: 12px;
 }
-.lightbox figcaption { margin-top: 6px; font-size: 12px; }
+.spec-table caption {
+  text-align: left;
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: var(--accent-label);
+}
+.spec-table th, .spec-table td {
+  border: 1px solid var(--module-border);
+  padding: 5px 8px;
+  text-align: left;
+}
+.spec-table th { background: var(--tan-bg); width: 35%; }
+.spec-table em { color: var(--text-muted); font-style: italic; }
 
 
 /* ==========================================================================
-   RESPONSIVE
+   EXPERIENCE / JOBS
    ========================================================================== */
-@media (max-width: 700px) {
-  body { padding: 10px 6px 26px; }
-  .layout { grid-template-columns: 1fr; }
-  .profile-card { max-width: 240px; margin: 0 auto; }
+.job { margin: 0 0 14px; }
+.job:last-child { margin-bottom: 0; }
+.job-title { margin: 0; font-weight: bold; }
+.job-meta { margin: 0 0 6px; font-size: 11px; color: var(--text-muted); }
+.job ul { margin: 0; }
+
+
+/* ==========================================================================
+   TABLES (certifications)
+   ========================================================================== */
+.cert-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+.cert-table th, .cert-table td {
+  border: 1px solid var(--module-border);
+  padding: 6px 8px;
+  text-align: left;
+}
+.cert-table th { background: var(--navy); color: #fff; }
+.cert-table tr:nth-child(even) td { background: #f4f6fb; }
+
+.award-row {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+.award-row img { border: 1px solid var(--module-border); flex: none; }
+.award-row ul { margin: 0; flex: 1 1 240px; }
+
+.tools-list { margin: 0; }
+
+
+/* ==========================================================================
+   CONTACT FIELDS
+   ========================================================================== */
+.field-row-stacked {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-width: 420px;
+  margin-bottom: 10px;
+}
+.field-row-stacked label { font-size: 11px; font-weight: bold; color: var(--text-muted); }
+.field-border {
+  background: #fff;
+  border: 1px solid var(--module-border);
+  padding: 6px 8px;
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+.site-footer {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-muted);
+  padding: 16px 0 30px;
 }
 
 
 /* ==========================================================================
    BOOT SCREEN
    Fake Windows 98 startup screen, shown once per browser session (see
-   boot.js). Click, press any key, or wait it out to get to the site.
+   boot.js). Fully self contained, no external CSS library needed.
    ========================================================================== */
 #boot-screen {
   position: fixed;
@@ -167,22 +345,53 @@ fieldset { margin: 0; }
 
 .boot-inner { text-align: center; }
 .boot-logo {
+  font-family: Arial, sans-serif;
   font-size: 40px;
   font-weight: bold;
   letter-spacing: .5px;
   line-height: 1;
 }
 .boot-logo span { color: #ff8c1a; }
-.boot-sub { margin: 10px 0 28px; font-size: 12px; color: #bbb; }
-.boot-progress { width: 220px; margin: 0 auto; }
-.boot-progress .progress-indicator-bar { animation: boot-fill 1.6s ease forwards; }
+.boot-sub { margin: 10px 0 28px; font-size: 12px; color: #bbb; font-family: Arial, sans-serif; }
+
+.boot-progress-track {
+  width: 220px;
+  height: 18px;
+  margin: 0 auto;
+  padding: 2px;
+  box-sizing: border-box;
+  background: #111;
+  border: 1px solid #555;
+}
+.boot-progress-fill {
+  display: block;
+  height: 100%;
+  width: 0;
+  background-image: repeating-linear-gradient(90deg, var(--navy) 0 14px, transparent 0 16px);
+  background-repeat: repeat;
+  background-size: 16px 100%;
+  animation: boot-fill 1.6s ease forwards;
+}
 @keyframes boot-fill { from { width: 0; } to { width: 100%; } }
+
 .boot-hint {
   margin-top: 20px;
   font-size: 11px;
   color: #777;
+  font-family: Arial, sans-serif;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .boot-progress .progress-indicator-bar { animation: none; width: 100%; }
+  .boot-progress-fill { animation: none; width: 100%; }
+}
+
+
+/* ==========================================================================
+   RESPONSIVE
+   ========================================================================== */
+@media (max-width: 760px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .profile-card { max-width: 240px; margin: 0 auto; }
+  .garage-layout { grid-template-columns: 1fr; }
+  .site-header-inner { flex-direction: column; align-items: flex-start; }
 }
