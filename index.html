@@ -3,187 +3,397 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Aedan Johnson | Home</title>
-  <meta name="description" content="Personal profile of Aedan Johnson, a cybersecurity and networking student at Monroe Career and Technical Institute.">
-  <!-- 98.css draws every classic Windows 98 control: windows, title bars,
-       group boxes, tabs, tables, status bars. style.css only adds the
-       page layout on top of it. -->
-  <link rel="stylesheet" href="https://unpkg.com/98.css">
+  <title>Aedan Johnson</title>
+  <meta name="description" content="Aedan Johnson's profile: cybersecurity and networking student, car and PC guy, metal music fan.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ==========================================================================
      BOOT SCREEN
-     Fake Windows 98 startup, shown once per browser session. Logic lives in
-     boot.js. Click, press a key, or wait it out.
+     Fake startup screen, shown once per browser session. Logic in boot.js.
+     Click, press a key, or wait it out.
      ========================================================================== -->
 <div id="boot-screen">
   <div class="boot-inner">
     <div class="boot-logo">Windows<span>98</span></div>
     <div class="boot-sub">Aedan Johnson Edition</div>
-    <div class="progress-indicator segmented boot-progress">
-      <span class="progress-indicator-bar"></span>
+    <div class="boot-progress-track">
+      <span class="boot-progress-fill"></span>
     </div>
     <p class="boot-hint">Starting up&hellip; (click to skip)</p>
   </div>
 </div>
 
 <!-- ==========================================================================
-     OUTER WINDOW
-     Every page is one 98.css "window". Copy this whole title-bar block onto
-     other pages and just change the title-bar-text.
+     SITE HEADER
      ========================================================================== -->
-<div class="site-window window">
-
-  <div class="title-bar">
-    <div class="title-bar-text">Aedan Johnson | Home</div>
-    <div class="title-bar-controls">
-      <button aria-label="Minimize"></button>
-      <button aria-label="Maximize"></button>
-      <button aria-label="Close"></button>
-    </div>
-  </div>
-
-  <div class="window-body">
-
-    <!-- ------------------------------------------------------------------
-         SHARED NAV, BUILT AS 98.css TABS
-         Same six tabs on every page. Put aria-selected="true" on the tab
-         for whichever page you're on, and remove it from the others.
-         ------------------------------------------------------------------ -->
-    <menu role="tablist">
-      <li role="tab" aria-selected="true"><a href="index.html">Home</a></li>
-      <li role="tab"><a href="about.html">About</a></li>
-      <li role="tab"><a href="skills.html">Skills</a></li>
-      <li role="tab"><a href="experience.html">Experience</a></li>
-      <li role="tab"><a href="photos.html">Photos</a></li>
-      <li role="tab"><a href="contact.html">Contact</a></li>
-    </menu>
-
-    <!-- The tab content lives inside its own nested window, per the 98.css
-         tabs pattern. -->
-    <div class="window" role="tabpanel">
-      <div class="window-body">
-
-        <div class="layout">
-
-          <!-- ===== SIDEBAR ===== -->
-          <aside class="col-side">
-
-            <!-- PROFILE PHOTO BOX
-                 Replace images/profile.jpg with your own photo. -->
-            <fieldset class="profile-card">
-              <legend>Aedan Johnson</legend>
-              <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson"
-                   width="600" height="700">
-              <p class="name">Aedan</p>
-              <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
-            </fieldset>
-
-            <fieldset>
-              <legend>The Basics</legend>
-              <dl class="kv">
-                <dt>Location</dt>
-                <dd>Brodheadsville, PA</dd>
-                <dt>Studying</dt>
-                <dd>Computer Networking &amp; Security</dd>
-                <dt>Certs</dt>
-                <dd>AWS, CCNA ITN, TestOut PC Pro</dd>
-                <dt>Competes in</dt>
-                <dd>CyberPatriot, SkillsUSA</dd>
-              </dl>
-            </fieldset>
-
-            <fieldset>
-              <legend>Elsewhere</legend>
-              <ul class="stack">
-                <li><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></li>
-                <!-- Paste your real LinkedIn URL over the placeholder below -->
-                <li><a href="https://www.linkedin.com/in/your-linkedin-here">LinkedIn</a></li>
-                <li><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></li>
-              </ul>
-            </fieldset>
-
-          </aside>
-
-          <!-- ===== MAIN COLUMN ===== -->
-          <main class="col-main">
-
-            <fieldset>
-              <legend>Hey, I'm Aedan</legend>
-              <p>
-                I'd rather take something apart, mess with it, and learn how to fix
-                it than just leave it alone.
-              </p>
-              <p>
-                I'm a networking student at Monroe Career &amp; Technical Institute,
-                still finishing high school at Pleasant Valley. I'm into technology,
-                computers, and figuring out how things work, especially networking,
-                cybersecurity, homelabs, and PC building. Anything that lets me
-                actually work with tech instead of just reading about it.
-              </p>
-              <p>
-                I've picked up experience through internships, school projects, and
-                messing with tech on my own. The last two summers I interned
-                remotely at Achyuraa, a tech services firm working in AI, cloud and
-                managed services, and cybersecurity. I built a prototype to catch AI
-                hallucinations, then came back the next year to work on their
-                customer facing chatbot and the website content behind it. In
-                between, I work product flow at Best Buy and pick up flexible
-                shifts at Woodstone Country Club.
-              </p>
-              <p>
-                <a href="about.html">More about how I got here</a> or
-                <a href="experience.html">skip to the work history</a>.
-              </p>
-            </fieldset>
-
-            <fieldset>
-              <legend>At a Glance</legend>
-              <div class="tile-grid">
-                <fieldset>
-                  <legend>Certified</legend>
-                  <p>AWS, Cisco CCNA Introduction to Networks, TestOut PC Pro, plus
-                     Cisco cybersecurity and OS fundamentals.</p>
-                </fieldset>
-                <fieldset>
-                  <legend>Competed</legend>
-                  <p>CyberPatriot XVIII, second place gold tier at the Pennsylvania
-                     state round. SkillsUSA IT Servicing, second at districts.</p>
-                </fieldset>
-                <fieldset>
-                  <legend>Built</legend>
-                  <p>An AI hallucination detector, a structured chatbot FAQ system,
-                     and a WordPress deployment guide for a real client site.</p>
-                </fieldset>
-              </div>
-            </fieldset>
-
-            <fieldset>
-              <legend>Currently</legend>
-              <ul>
-                <li>Building out my homelab and messing with new PC builds</li>
-                <li>Studying for my next Cisco exam</li>
-                <li>Getting into buying and reselling electronics and computers</li>
-                <li>Open to networking and cybersecurity internships for next summer</li>
-              </ul>
-            </fieldset>
-
-          </main>
-        </div>
-
-        <!-- STATUS BAR -->
-        <div class="status-bar">
-          <p class="status-bar-field">Ready</p>
-          <p class="status-bar-field">Cybersecurity &amp; Networking student</p>
-          <p class="status-bar-field">MCTI</p>
-        </div>
-
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="site-brand">
+      <div class="brand-badge" aria-hidden="true">AJ</div>
+      <div>
+        <p class="brand-name">aedanjohnson</p>
+        <p class="brand-tagline">a space for networking, security, and cars</p>
       </div>
     </div>
-
+    <nav class="site-nav" aria-label="Page sections">
+      <a href="#about">About</a>
+      <a href="#interests">Interests</a>
+      <a href="#garage">Garage</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </div>
+</header>
+
+<div class="page-frame">
+
+  <div class="profile-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="col-side">
+
+      <section class="module">
+        <h2 class="module-header">Aedan Johnson</h2>
+        <div class="module-body profile-card">
+          <img src="images/profile.jpg" alt="Portrait photo of Aedan Johnson" width="600" height="700">
+          <p class="name">Aedan</p>
+          <p class="role">Cybersecurity &amp; Networking @ MCTI</p>
+        </div>
+      </section>
+
+      <section class="module module--tan">
+        <h2 class="module-header">The Basics</h2>
+        <div class="module-body">
+          <dl class="kv">
+            <dt>Location</dt>
+            <dd>Brodheadsville, PA</dd>
+            <dt>Studying</dt>
+            <dd>Computer Networking &amp; Security</dd>
+            <dt>Certs</dt>
+            <dd>AWS, CCNA ITN, TestOut PC Pro</dd>
+            <dt>Competes in</dt>
+            <dd>CyberPatriot, SkillsUSA</dd>
+          </dl>
+        </div>
+      </section>
+
+      <section class="module">
+        <h2 class="module-header">Elsewhere</h2>
+        <div class="module-body">
+          <ul class="stack">
+            <li><a href="https://github.com/Aedan-Johnson">GitHub: Aedan-Johnson</a></li>
+            <!-- Paste your real LinkedIn URL over the placeholder below -->
+            <li><a href="https://www.linkedin.com/in/your-linkedin-here">LinkedIn</a></li>
+            <li><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="module module--tan">
+        <h2 class="module-header">On This Page</h2>
+        <div class="module-body">
+          <ul class="stack">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#interests">Interests</a></li>
+            <li><a href="#garage">The Garage</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Certs &amp; Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </section>
+
+    </aside>
+
+    <!-- ===== MAIN COLUMN ===== -->
+    <main class="col-main">
+
+      <!-- ABOUT -->
+      <section class="module" id="about">
+        <h2 class="module-header">About Me</h2>
+        <div class="module-body">
+          <p>
+            I'd rather take something apart, mess with it, and learn how to fix it
+            than just leave it alone. I'm a networking student at Monroe Career
+            &amp; Technical Institute, still finishing high school at Pleasant
+            Valley, and I'm into technology, computers, and figuring out how
+            things work: networking, cybersecurity, homelabs, and PC building
+            most of all.
+          </p>
+          <p>
+            I've picked up experience through internships, school projects, and
+            messing with tech on my own. The last two summers I interned remotely
+            at Achyuraa, a tech services firm working in AI, cloud and managed
+            services, and cybersecurity. I built a prototype to catch AI
+            hallucinations, then came back the next year to work on their
+            customer facing chatbot and the website content behind it. In
+            between, I work product flow at Best Buy and pick up flexible shifts
+            at Woodstone Country Club.
+          </p>
+          <p>
+            Outside of school and work it's cars, PC builds, metal music, and
+            Formula 1, roughly in that order depending on the week.
+          </p>
+        </div>
+      </section>
+
+      <!-- INTERESTS -->
+      <section class="module" id="interests">
+        <h2 class="module-header">Interests</h2>
+        <div class="module-body">
+
+          <h3 class="sub-label">General</h3>
+          <p>
+            Networking, cybersecurity, homelabs, PC building, cars, Formula 1,
+            and playing guitar.
+          </p>
+
+          <h3 class="sub-label">Music</h3>
+          <p>Metal, mostly: Korn, Bullet For My Valentine, Sevendust, Opeth, Linkin Park.</p>
+          <div class="tile-grid tile-grid--square">
+            <figure class="tile">
+              <img src="images/korn.jpg" alt="Korn album art" width="300" height="300" loading="lazy">
+              <figcaption>Korn</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/bullet-for-my-valentine.jpg" alt="Bullet For My Valentine album art" width="300" height="300" loading="lazy">
+              <figcaption>Bullet For My Valentine</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/sevendust.jpg" alt="Sevendust album art" width="300" height="300" loading="lazy">
+              <figcaption>Sevendust</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/opeth.jpg" alt="Opeth album art" width="300" height="300" loading="lazy">
+              <figcaption>Opeth</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/linkin-park.jpg" alt="Linkin Park album art" width="300" height="300" loading="lazy">
+              <figcaption>Linkin Park</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sub-label">Movies</h3>
+          <p>Fast &amp; Furious (1 through 3), The Social Network, Ford v Ferrari, The Breakfast Club.</p>
+          <div class="tile-grid tile-grid--poster">
+            <figure class="tile">
+              <img src="images/fast-and-furious.jpg" alt="Fast and Furious poster" width="300" height="445" loading="lazy">
+              <figcaption>Fast &amp; Furious 1&ndash;3</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/the-social-network.jpg" alt="The Social Network poster" width="300" height="445" loading="lazy">
+              <figcaption>The Social Network</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/ford-v-ferrari.jpg" alt="Ford v Ferrari poster" width="300" height="445" loading="lazy">
+              <figcaption>Ford v Ferrari</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/the-breakfast-club.jpg" alt="The Breakfast Club poster" width="300" height="445" loading="lazy">
+              <figcaption>The Breakfast Club</figcaption>
+            </figure>
+          </div>
+
+          <h3 class="sub-label">Games</h3>
+          <ul>
+            <li>Forza Horizon franchise</li>
+            <li>Watch Dogs</li>
+            <li>Helldivers 2</li>
+            <li>Need for Speed franchise</li>
+          </ul>
+
+          <h3 class="sub-label">Heroes</h3>
+          <ul>
+            <li><strong>Paul Walker</strong>, for the Fast &amp; Furious franchise and the love of cars that came with it</li>
+            <li><strong>Steve Jobs</strong>, for what he did with Apple and tech in general</li>
+          </ul>
+
+        </div>
+      </section>
+
+      <!-- GARAGE -->
+      <section class="module" id="garage">
+        <h2 class="module-header">The Garage</h2>
+        <div class="module-body">
+          <p>
+            Between the homelab and actual cars, "the garage" covers a lot of
+            ground. Here's the build I spend the most time tinkering with.
+          </p>
+          <div class="garage-layout">
+            <img class="garage-photo" src="images/pc-build.jpg" alt="Aedan's PC build" width="640" height="480" loading="lazy">
+            <table class="spec-table">
+              <caption>PC build specs</caption>
+              <tbody>
+                <tr><th scope="row">CPU</th><td><em>Add your CPU here</em></td></tr>
+                <tr><th scope="row">GPU</th><td><em>Add your GPU here</em></td></tr>
+                <tr><th scope="row">RAM</th><td><em>Add your RAM here</em></td></tr>
+                <tr><th scope="row">Storage</th><td><em>Add your storage here</em></td></tr>
+                <tr><th scope="row">Case</th><td><em>Add your case here</em></td></tr>
+                <tr><th scope="row">Cooling</th><td><em>Add your cooling here</em></td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3 class="sub-label">Also In Here</h3>
+          <div class="tile-grid tile-grid--mixed">
+            <figure class="tile tile--tall">
+              <img src="images/guitar.jpg" alt="Aedan's guitar" width="480" height="720" loading="lazy">
+              <figcaption>Guitar</figcaption>
+            </figure>
+            <figure class="tile">
+              <img src="images/f1.jpg" alt="Formula 1" width="640" height="427" loading="lazy">
+              <figcaption>Formula 1</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section class="module" id="experience">
+        <h2 class="module-header">Experience</h2>
+        <div class="module-body">
+
+          <h3 class="sub-label">Currently Working</h3>
+          <div class="job">
+            <p class="job-title">Product Flow Specialist</p>
+            <p class="job-meta">Best Buy &nbsp;/&nbsp; Bethlehem, PA &nbsp;/&nbsp; September 2025 to present</p>
+            <ul>
+              <li>Receive, organize, and stage inventory for the sales floor and online orders</li>
+              <li>Pick, pack, and ship customer orders accurately under daily volume targets</li>
+              <li>Maintain warehouse organization and inventory accuracy in internal systems</li>
+            </ul>
+          </div>
+          <div class="job">
+            <p class="job-title">Dishwasher and Kitchen Support</p>
+            <p class="job-meta">Woodstone Country Club &nbsp;/&nbsp; Danielsville, PA &nbsp;/&nbsp; April 2026 to present</p>
+            <ul>
+              <li>Run industrial dishwashing equipment through high volume service</li>
+              <li>Keep kitchen equipment, dishes, and work areas clean and compliant with health and safety standards</li>
+              <li>Flexible scheduling around school and my other job</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-label">Technical Experience</h3>
+          <div class="job">
+            <p class="job-title">AI Chatbot Development Intern</p>
+            <p class="job-meta">Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2026 to August 2026</p>
+            <ul>
+              <li>Wrote website and chatbot content, turning internal service descriptions into copy a customer could actually read</li>
+              <li>Organized the chatbot knowledge base into a structured FAQ system</li>
+              <li>Built a WordPress guide covering content deployment, Beaver Builder, and SEO requirements</li>
+            </ul>
+          </div>
+          <div class="job">
+            <p class="job-title">Artificial Intelligence Engineer Intern</p>
+            <p class="job-meta">Achyuraa &nbsp;/&nbsp; Remote &nbsp;/&nbsp; July 2025 to August 2025</p>
+            <ul>
+              <li>Prototyped a local system that detects AI hallucinations using machine learning techniques</li>
+              <li>Cleaned, structured, and prepared raw datasets for model experimentation</li>
+              <li>Tested and benchmarked multiple models for accuracy</li>
+            </ul>
+            <p class="job-meta">Code and writeups: <a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a></p>
+          </div>
+
+          <h3 class="sub-label">Earlier</h3>
+          <div class="job">
+            <p class="job-title">Student Summer Maintenance Technician</p>
+            <p class="job-meta">Pleasant Valley School District &nbsp;/&nbsp; Brodheadsville, PA &nbsp;/&nbsp; Summers 2023 and 2024</p>
+          </div>
+          <div class="job">
+            <p class="job-title">Patrol Leader</p>
+            <p class="job-meta">Boy Scouts of America &nbsp;/&nbsp; Northampton, PA &nbsp;/&nbsp; May 2017 to June 2022</p>
+            <ul>
+              <li>Led and mentored younger scouts through meetings and activities</li>
+              <li>Coordinated Eagle Scout service projects</li>
+              <li>Earned the rank of Life Scout</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-label">Education</h3>
+          <p>
+            <strong>Monroe Career &amp; Technical Institute</strong> &mdash; Bartonsville, PA,
+            Computer Networking &amp; Security, August 2024 to present<br>
+            <strong>Pleasant Valley High School</strong> &mdash; Brodheadsville, PA,
+            General Academics, August 2023 to present
+          </p>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="module" id="skills">
+        <h2 class="module-header">Certifications &amp; Skills</h2>
+        <div class="module-body">
+
+          <h3 class="sub-label">Certifications</h3>
+          <table class="cert-table">
+            <thead>
+              <tr><th>Certification</th><th>Issuer</th><th>Focus</th></tr>
+            </thead>
+            <tbody>
+              <!-- Replace with the exact name printed on your AWS badge -->
+              <tr><td>AWS Certification</td><td>Amazon Web Services</td><td>Cloud fundamentals, IAM basics</td></tr>
+              <tr><td>CCNA: Introduction to Networks</td><td>Cisco</td><td>Addressing, switching, routing</td></tr>
+              <tr><td>PC Pro</td><td>TestOut</td><td>Hardware and OS troubleshooting</td></tr>
+              <tr><td>Introduction to Cybersecurity</td><td>Cisco</td><td>Threats, attack surfaces, defense</td></tr>
+              <tr><td>Networking Basics</td><td>Cisco</td><td>Protocols and network media</td></tr>
+              <tr><td>Operating Systems Basics</td><td>Cisco</td><td>File systems, processes, permissions</td></tr>
+            </tbody>
+          </table>
+
+          <h3 class="sub-label">Awards</h3>
+          <div class="award-row">
+            <img src="images/cyberpatriot-18.png" alt="CyberPatriot XVIII, National Youth Cyber Defense Competition graphic" width="160" height="120" loading="lazy">
+            <ul>
+              <li><strong>CyberPatriot XVIII</strong> &mdash; second place, gold tier, Pennsylvania state round</li>
+              <li><strong>SkillsUSA</strong> &mdash; second place, IT Servicing, districts</li>
+              <li><strong>MCTI</strong> &mdash; Student of the Quarter, Q1 and Q4, 2024 to 2025</li>
+            </ul>
+          </div>
+
+          <h3 class="sub-label">Tools I Use</h3>
+          <ul class="tools-list">
+            <li>Windows Server, Windows 10/11, Linux (Ubuntu, CLI daily)</li>
+            <li>Cisco IOS, Packet Tracer, Wireshark</li>
+            <li>Python, pandas, scikit-learn</li>
+            <li>Git and GitHub, WordPress, Beaver Builder</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="module" id="contact">
+        <h2 class="module-header">Contact</h2>
+        <div class="module-body">
+          <p>
+            Best way to reach me is email. If you're hiring, happy to send a
+            resume or walk through anything above.
+          </p>
+          <div class="field-row-stacked">
+            <label>Email</label>
+            <div class="field-border"><a href="mailto:aedan.johnson@outlook.com">aedan.johnson@outlook.com</a></div>
+          </div>
+          <div class="field-row-stacked">
+            <label>LinkedIn</label>
+            <!-- Paste your real LinkedIn URL in both the href and the text -->
+            <div class="field-border"><a href="https://www.linkedin.com/in/your-linkedin-here">linkedin.com/in/your-linkedin-here</a></div>
+          </div>
+          <div class="field-row-stacked">
+            <label>GitHub</label>
+            <div class="field-border"><a href="https://github.com/Aedan-Johnson">github.com/Aedan-Johnson</a></div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer class="site-footer">
+    <p>Aedan Johnson &nbsp;&middot;&nbsp; Cybersecurity &amp; Networking student &nbsp;&middot;&nbsp; MCTI</p>
+  </footer>
+
 </div>
 
 <script src="boot.js" defer></script>
