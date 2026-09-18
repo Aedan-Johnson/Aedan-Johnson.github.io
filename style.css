@@ -113,7 +113,7 @@ img { max-width: 100%; display: block; }
 
 .profile-layout {
   display: grid;
-  grid-template-columns: 230px minmax(0, 1fr);
+  grid-template-columns: 260px minmax(0, 1fr);
   gap: 14px;
 }
 .col-side > * + *,
