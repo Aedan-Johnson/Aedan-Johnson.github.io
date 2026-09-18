@@ -176,6 +176,20 @@ img { max-width: 100%; display: block; }
 .profile-card .name { font-weight: bold; margin: 8px 0 2px; }
 .profile-card .role { font-size: 11px; margin: 0; color: var(--text-muted); }
 
+/* Lets the photo grow past the sidebar's left edge on its own, without
+   resizing the sidebar column (and everything under it) to match. Only
+   on wider screens: on a narrow phone screen there's no room to bleed
+   into, so it would just get clipped by the viewport or cause a
+   horizontal scrollbar. */
+.module--photo-bleed { overflow: visible; }
+@media (min-width: 761px) {
+  .module--photo-bleed .profile-card img {
+    width: 340px;
+    max-width: none;
+    margin: 0 0 0 auto;
+  }
+}
+
 
 /* ==========================================================================
    SMALL WIDGET HELPERS
