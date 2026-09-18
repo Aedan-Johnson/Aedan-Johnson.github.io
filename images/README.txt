@@ -8,8 +8,6 @@ automatically, no code editing needed.
   guitar.jpg                     your guitar, in "The Garage" (vertical/portrait works best)
   f1.jpg                         a Formula 1 photo, in "The Garage"
 
-  korn.jpg                       Korn album art, in Interests > Music
-  bullet-for-my-valentine.jpg    Bullet For My Valentine album art
   sevendust.jpg                  Sevendust album art
   opeth.jpg                      Opeth album art
   linkin-park.jpg                Linkin Park album art
